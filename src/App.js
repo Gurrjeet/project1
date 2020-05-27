@@ -24,7 +24,7 @@ class App extends Component {
     <Route path = '/' component= {Home} exact/> {/* This link is for the home page  */} 
     <Route path = '/viewSite' component= {ViewSite} />  {/* This component shows the photo and information of all the service provider  */} 
     <Route path = "/moredetails"  component= {MoreDetails} /> {/* This component shows the all the photos of a specific service provider  */} 
-    <Route  component= {Error} />  {/* it works only if the above components are not used */} 
+    <Route  component= {Error} />  {/* it work only if the above components are not used */} 
      </Switch>
      </BrowserRouter> 
 
