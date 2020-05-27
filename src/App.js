@@ -16,8 +16,6 @@ class App extends Component {
   
     <div>
   
-
-  
   <BrowserRouter>
        <Navbar /> 
      <Switch>

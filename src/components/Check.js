@@ -1,17 +1,31 @@
 import React, {Component} from 'react';
+import Check1 from '../components/Check1';
 
 import '../App.css';
 
 
 class Check extends Component {
+
+ a = [
+  { id: 1,
+    name : 'ddd'
+
+  },
+  {
+id:2,
+name: 'ssssss'
+  }
+]
+
+ 
     render(){
+   const   gur = this.a.map(x => <div> < Check1  a={x} />
+
+   </div>)
+
   return (
-    <div  style = {{padding: 3}}>
-     <img src ="../image/a.jpg" className="img-thumbnail"  alt="NP" style = {{ border: '3px solid green', height: 350, width: 400}} />         
-     <img src ="../image/b.jpg" className="img-thumbnail"  alt="NP" style = {{ border: '3px solid green', height: 350, width: 400}} />         
-     <img src ="../image/c.jpg" className="img-thumbnail"  alt="NP" style = {{ border: '3px solid green', height: 350, width: 400}} />         
-     <img src ="../image/e.jpg" className="img-thumbnail"  alt="NP" style = {{ border: '3px solid green', height: 350, width: 400}} />         
-    
+    <div >
+     {gur}
     </div>
   );
 }

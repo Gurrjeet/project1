@@ -65,8 +65,8 @@ class ViewSite extends Component
             return (
              
             
-           <div className ="container-fluid p-2" key ={imageData.id} style ={{backgroundColor:'white'}}>
-             <h3>
+           <div className ="container-fluid p-2" key ={postData.id} style ={{backgroundColor:'white'}}>
+             <div style = {{ borderColor: 'black', borderWidth: 3, padding: 15,  borderBottomStyle: 'outset'}}>
            <h4 style = {{color: 'black', fontSize: 50, textAlign : 'center', fontFamily: " Arial" }}> <p className = 'ViewSite'>{postData.title.rendered}</p></h4>
            <div className="row">
            <div className="col-4" >
@@ -78,14 +78,14 @@ class ViewSite extends Component
             
            </div>
            </div>
-           </h3>
+           </div>
            </div>
             )}
            else {
            return(
            
            
-           <div className ="container-fluid p-2" key ={imageData.id} style ={{backgroundColor:'#3c3c3c'}}>
+           <div className ="container-fluid p-2" key ={postData.id} style ={{backgroundColor:'#3c3c3c'}}>
             <h3>
            <img   src = {imageData[i].props.children[2]} className="img-thumbnail"  alt="NP" style = {{ border: '1px solid black',  height: 450, width: 350}} />         
            
