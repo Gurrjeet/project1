@@ -8,7 +8,7 @@ class Home extends Component {
     
   
  <div > 
-
+{/* all the images are in the public folder*/}
     <img src ="../image/a.jpg"  className="rounded-circle"  alt="NP" style = {{ height: 520, maxWidth: 450,  padding: 25 }}/>
      <img src ="../image/b.jpg" className="rounded-circle"  alt="NP" style = {{ height: 520, maxWidth: 450,  padding:25 }}/>
     <img src ="../image/c.jpg"  className="rounded-circle" alt="NP"style = {{ height: 520, maxWidth: 450,  padding:25 }}/>

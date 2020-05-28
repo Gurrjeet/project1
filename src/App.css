@@ -1,23 +1,21 @@
 
   
-  h3{
-   
-    border-bottom-style:outset;
-    border-color: black;
-    border-width: 3px; 
-    padding: 15px;
-   
-    
-  }
+
+ /* to change the color of the name in Viewsite component */   
   p.ViewSite:hover {
     color: red;
   }
+
+
+  /*  the first letter of the text will apppear in bold */   
 p.Desc::first-letter{
   font-size: 30px;}
 
-  .main-nav:hover{ 
+  /*  to change the color of the link will is used navbar (home, Viewsite) */   
+ .main-nav:hover{ 
     color: blue !important; }
-  
+
+ /*  design the color of the Logo ( The force) in navbar */      
 h1.gur {
       text-shadow: 2px 2px red; 
       font-style: 'Times New Roman';

@@ -66,7 +66,7 @@ class ViewSite extends Component
              
             
            <div className ="container-fluid p-2" key ={postData.id} style ={{backgroundColor:'white'}}>
-             <div style = {{ borderColor: 'black', borderWidth: 3, padding: 15,  borderBottomStyle: 'outset'}}>
+             <div style = {{ borderColor: 'black', borderWidth: 3, padding: 25,  borderBottomStyle: 'outset'}}>
            <h4 style = {{color: 'black', fontSize: 50, textAlign : 'center', fontFamily: " Arial" }}> <p className = 'ViewSite'>{postData.title.rendered}</p></h4>
            <div className="row">
            <div className="col-4" >
@@ -75,6 +75,7 @@ class ViewSite extends Component
            <div className="col-8 text-success" > 
            <p className= 'Desc' style = {{ color: 'black', fontSize: 20, textIndent: 50, fontFamily: 'Times'}}> {short}</p>
           <h4> <NavLink to = {{ pathname: '/moredetails', aboutProps: postData.title.rendered }} className = 'btn btn-dark btn-lg' style ={{textDecoration:'underline'}}>More Pics</NavLink> </h4> 
+            <h4> <NavLink to = {{ pathname: '/contact', aboutProps: postData.title.rendered }} className = 'btn btn-danger btn-lg' >Contact {postData.title.rendered}</NavLink> </h4> 
             
            </div>
            </div>
