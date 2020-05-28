@@ -19,12 +19,12 @@ class ViewSite extends Component
 
   componentDidMount()
  {
-   // getting all the post data from json file
+   // getting all the post data from json text
    let projectsURL = "http://paramour.anythingnet.com.au/wp-json/wp/v2/posts";
-   // getting all the media data from json file
+   // getting all the media data from json text
    let projectsURL1 = "http://paramour.anythingnet.com.au/wp-json/wp/v2/media";
 
-   // storing the post data in project array 
+   // storing the post data in postData array 
    fetch(projectsURL)
    .then(response => response.json())
    .then(response => {
@@ -32,7 +32,7 @@ class ViewSite extends Component
       postData: response
      })
    })
-   // storing the media data in projects array 
+   // storing the media data in imageData array 
    fetch(projectsURL1)
    .then(response => response.json())
    .then(response => {
@@ -48,16 +48,18 @@ class ViewSite extends Component
  render() 
  {
   
-
+/* Storing image URL and title in imageData  */
    const imageData = this.state.imageData.map(imageData => 
    <div key = {imageData.id}>{imageData.title.rendered} {imageData.source_url} </div>)
   
    const postData = this.state.postData.map(postData =>
     { 
+      /* removing tags and space from post data  */
       const regex = /(<([^>]+)>)/ig; 
       var short =postData.excerpt.rendered.replace(regex, '')      
       let b = 0;
-      for(let i =0; i < imageData.length ; i++) 
+      for(let i =0; i < imageData.length ; i++)
+      /* comparing the name of the images and  with the title */
        {    if (postData.title.rendered === imageData[i].props.children[0])
          { 
            if (b === 0)
@@ -74,7 +76,9 @@ class ViewSite extends Component
            </div>
            <div className="col-8 text-success" > 
            <p className= 'Desc' style = {{ color: 'black', fontSize: 20, textIndent: 50, fontFamily: 'Times'}}> {short}</p>
+          {/* Link to view more photos  */}
           <h4> <NavLink to = {{ pathname: '/moredetails', aboutProps: postData.title.rendered }} className = 'btn btn-dark btn-lg' style ={{textDecoration:'underline'}}>More Pics</NavLink> </h4> 
+             {/* Link to contact the service provider  */}
             <h4> <NavLink to = {{ pathname: '/contact', aboutProps: postData.title.rendered }} className = 'btn btn-danger btn-lg' >Contact {postData.title.rendered}</NavLink> </h4> 
             
            </div>
