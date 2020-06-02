@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import '../App.css';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import {Carousel} from 'react-responsive-carousel'
 
 class MoreDetails extends Component
   {
@@ -14,6 +13,7 @@ class MoreDetails extends Component
      this.state = 
       {
         media: [],
+        came:[],
       }
   }
 
@@ -34,43 +34,39 @@ class MoreDetails extends Component
     })     
   }
 
- 
+  
    render()
    { 
-
-    /* slider component declaration  */
-const settings = {
-    dots: true,
-    fade: true,
-    infinite: true,
-    speed: 100,
-    slidesToShow: 1,
-    arrows: true,
-    slidesToScroll: 1,
-    className: "slides"
-    }
-       
-   
-
+let a =0;
+let b =0;
+ 
 const check = this.state.media.map(media =>
     { 
   /* comparing the name of the images stored at image json link with name of the employee retirved from Viewsite
   component */
       if(media.title.rendered===this.props.location.aboutProps)
-       {
+       {  a++;
+       
            return(
-               <div>
-  <img  src = {media.source_url} alt="NP" className ="img-thumbnail mx-auto d-block" style = {{height: 500, width: 600, border: '2px solid green'}} />         
-  </div>
-        )}
+           
+               <div key = {media.id}>
+               {media.source_url}  
+               </div>
+                 
+        )
+      
+        }
     })
+    console.log('gg' + check.key )  
+    
 
 return (
-<div style = {{padding: 30, alignItems: 'center'}}>
- <Slider {...settings}>
-       {check}
- </Slider>
-</div>    
+<div>
+ 
+{check[0]}
+
+</div>
+          
 );
     
 }}

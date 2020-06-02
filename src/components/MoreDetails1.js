@@ -69,13 +69,14 @@ console.log("DDD")
     })
 
 return (
-<div style = {{padding: 30, alignItems: 'center'}}>
- <Slider {...settings}>
-       
-{check}
-      
- </Slider>
 
+/*<div style = {{padding: 30, alignItems: 'center'}}>
+  <Slider {...settings}>
+  {check}
+  </Slider>
+*/
+<div>
+  dndmdjkdjkkl
       </div>    
 
 );

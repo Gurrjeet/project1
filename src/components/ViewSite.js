@@ -52,6 +52,8 @@ class ViewSite extends Component
    const imageData = this.state.imageData.map(imageData => 
    <div key = {imageData.id}>{imageData.title.rendered} {imageData.source_url} </div>)
   
+   console.log(imageData)
+  
    const postData = this.state.postData.map(postData =>
     { 
       /* removing tags and space from post data  */
@@ -60,8 +62,10 @@ class ViewSite extends Component
       let b = 0;
       for(let i =0; i < imageData.length ; i++)
       /* comparing the name of the images and  with the title */
-       {    if (postData.title.rendered === imageData[i].props.children[0])
-         { 
+       {    
+          if (postData.title.rendered === imageData[i].props.children[0])
+         {  
+          console.log(imageData[i].props.children[0]) 
            if (b === 0)
            { b++
             return (
