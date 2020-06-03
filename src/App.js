@@ -13,7 +13,6 @@ import MoreDetails1 from './components/MoreDetails1';
 import Contact from './components/Contact';
 import Design from './components/Design';
 
-
 class App extends Component {
   render(){
   return (
@@ -36,3 +35,5 @@ class App extends Component {
 }
 
 export default App;
+
+

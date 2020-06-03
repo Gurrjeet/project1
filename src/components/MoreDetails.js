@@ -13,7 +13,7 @@ class MoreDetails extends Component
      this.state = 
       {
         media: [],
-        came:[],
+       
       }
   }
 
@@ -31,48 +31,51 @@ class MoreDetails extends Component
      this.setState({
      media: response
       })
-    })     
+    })  
+    
+    
   }
+  
 
+    
+  
+ 
+  /*check = () => {
+    this.setState({media:this.state.media.filter(media => media.title.rendered===this.props.location.aboutProps)
+    })
+  }
+ */
   
    render()
-   { 
-let a =0;
-let b =0;
- 
-const check = this.state.media.map(media =>
-    { 
-  /* comparing the name of the images stored at image json link with name of the employee retirved from Viewsite
-  component */
-      if(media.title.rendered===this.props.location.aboutProps)
-       {  a++;
-       
-           return(
-           
-               <div key = {media.id}>
-               {media.source_url}  
-               </div>
-                 
-        )
-      
-        }
-    })
-    console.log('gg' + check.key )  
+   {  
+
+  const images =  this.state.media.filter(media => media.title.rendered===this.props.location.aboutProps)
     
+
 
 return (
-<div>
- 
-{check[0]}
+  <div style= {{backgroundColor: 'white'}}>
 
-</div>
-          
+   <Carousel>
+   {
+     images.map(images => {
+       return (
+      <div key = {images.id}>
+        <img   src = {images.source_url}  alt="NP"  />         
+        <h1 className = 'text-uppercase'> {this.props.location.aboutProps}</h1>   
+        
+          </div>
+       );
+     }
+     )}
+</Carousel>
+
+
+</div>      
 );
-    
+  
+
+
 }}
-
-
   
-  
-
 export default MoreDetails;

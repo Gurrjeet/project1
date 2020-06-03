@@ -36,9 +36,21 @@ class Design extends Component {
   <p> The world's upported by </p>
   <footer class="blockquote-footer">From WWF's website</footer>
   </blockquote>
-  
+
+
+  <ul className="pagination">
+  <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+  <li className="page-item"><a className="page-link" href="#">1</a></li>
+  <li className="page-item"><a className="page-link" href="#">Next</a></li>
+</ul>
  
-   
+
+  
+  <div className="progress" style={{height:30}}>
+  <div className="progress-bar bg-success progress-bar-striped progress-bar-animated" style={{width:400}}> progressive bar</div>
+</div>
+
+
 
   
      </div>

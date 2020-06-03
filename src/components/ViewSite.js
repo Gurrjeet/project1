@@ -46,16 +46,16 @@ class ViewSite extends Component
 
 
  render() 
- {
+ { 
   
 /* Storing image URL and title in imageData  */
    const imageData = this.state.imageData.map(imageData => 
    <div key = {imageData.id}>{imageData.title.rendered} {imageData.source_url} </div>)
-  
-   console.log(imageData)
+   
+   
   
    const postData = this.state.postData.map(postData =>
-    { 
+    {   
       /* removing tags and space from post data  */
       const regex = /(<([^>]+)>)/ig; 
       var short =postData.excerpt.rendered.replace(regex, '')      
@@ -65,7 +65,7 @@ class ViewSite extends Component
        {    
           if (postData.title.rendered === imageData[i].props.children[0])
          {  
-          console.log(imageData[i].props.children[0]) 
+          
            if (b === 0)
            { b++
             return (
@@ -73,7 +73,7 @@ class ViewSite extends Component
             
            <div className ="container-fluid p-2" key ={postData.id} style ={{backgroundColor:'white'}}>
              <div style = {{ borderColor: 'black', borderWidth: 3, padding: 25,  borderBottomStyle: 'outset'}}>
-           <h4 style = {{color: 'black', fontSize: 50, textAlign : 'center', fontFamily: " Arial" }}> <p className = 'ViewSite'>{postData.title.rendered}</p></h4>
+           <h4 className = 'text-uppercase' style = {{ fontSize: 50, textAlign : 'center', fontFamily: " Arial" }}> <span className ='class="badge badge-pill badge-danger' >{postData.title.rendered}</span></h4>
            <div className="row">
            <div className="col-4" >
            <img   src = {imageData[i].props.children[2]} className="img-thumbnail"  alt="NP" style = {{ border: '2px solid green', height: 450, width: 350}} />         
@@ -106,7 +106,7 @@ class ViewSite extends Component
      }
 
                })
-
+    
    return(
          <div>  
          {postData}  

@@ -2,8 +2,8 @@
   
 
  /* to change the color of the name in Viewsite component */   
-  p.ViewSite:hover {
-    color: red;
+  span:hover {
+    color: #FF4500;
   }
 
 
@@ -21,4 +21,18 @@ h1.gur {
       font-style: 'Times New Roman';
     }
 
-    
+.carousel .slide{
+      
+      color: Red;
+      background-color: white !important;
+       }
+
+    .carousel li.slide img {
+       height: 600px; 
+      width: 1400px;
+      }
+      
+      .carousel .control-dots { 
+      margin: 60px auto !important;
+      
+      }
