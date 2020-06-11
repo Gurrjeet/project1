@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-
 import '../App.css';
+import {NavLink} from 'react-router-dom';
 
 
 class Contact extends Component {
@@ -12,7 +12,7 @@ class Contact extends Component {
 
   return (
     <div className="container-fluid">
-   Working on This
+  Working on it
 </div>
     
  

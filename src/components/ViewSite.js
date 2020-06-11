@@ -20,9 +20,11 @@ class ViewSite extends Component
   componentDidMount()
  {
    // getting all the post data from json text
-   let projectsURL = "http://paramour.anythingnet.com.au/wp-json/wp/v2/posts";
+   let projectsURL = "http://f6n.4d5.myftpupload.com/wp-json/wp/v2/posts";
    // getting all the media data from json text
-   let projectsURL1 = "http://paramour.anythingnet.com.au/wp-json/wp/v2/media";
+   let projectsURL1 = "http://f6n.4d5.myftpupload.com/wp-json/wp/v2/media";
+
+
 
    // storing the post data in postData array 
    fetch(projectsURL)
@@ -46,7 +48,7 @@ class ViewSite extends Component
 
 
  render() 
- { 
+ {  
   
 /* Storing image URL and title in imageData  */
    const imageData = this.state.imageData.map(imageData => 

@@ -2,37 +2,38 @@
   
 
  /* to change the color of the name in Viewsite component */   
-  span:hover {
-    color: #FF4500;
+ span:hover {
+  color: #FF4500;
+}
+
+/*  the first letter of the text will apppear in bold */   
+p.Desc::first-letter{
+font-size: 30px;}
+
+/*  to change the color of the link will is used navbar (home, Viewsite) */   
+.main-nav:hover{ 
+  color: blue !important; }
+
+/*  design the color of the Logo ( The force) in navbar */      
+h1.gur {
+    text-shadow: 2px 2px red; 
+    font-style: 'Times New Roman';
   }
 
-
-  /*  the first letter of the text will apppear in bold */   
-p.Desc::first-letter{
-  font-size: 30px;}
-
-  /*  to change the color of the link will is used navbar (home, Viewsite) */   
- .main-nav:hover{ 
-    color: blue !important; }
-
- /*  design the color of the Logo ( The force) in navbar */      
-h1.gur {
-      text-shadow: 2px 2px red; 
-      font-style: 'Times New Roman';
-    }
-
 .carousel .slide{
-      
-      color: Red;
-      background-color: white !important;
-       }
+    
+    color: Red;
+    background-color: white !important;
+     }
 
-    .carousel li.slide img {
-       height: 600px; 
-      width: 1400px;
-      }
-      
-      .carousel .control-dots { 
-      margin: 60px auto !important;
-      
-      }
+  .carousel li.slide img {
+     height: 600px; 
+    width: 1400px;
+    }
+    
+    .carousel .control-dots { 
+    margin: 60px auto !important;
+    
+    } 
+
+

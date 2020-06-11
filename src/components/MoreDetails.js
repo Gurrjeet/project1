@@ -22,7 +22,7 @@ class MoreDetails extends Component
   {
     
     // getting all the media data from json 
-    let projectsURL1 = "http://paramour.anythingnet.com.au/wp-json/wp/v2/media";
+    let projectsURL1 = "http://f6n.4d5.myftpupload.com/wp-json/wp/v2/media";
 
     // storing the media data in media array 
     fetch(projectsURL1)
@@ -61,7 +61,7 @@ return (
      images.map(images => {
        return (
       <div key = {images.id}>
-        <img   src = {images.source_url}  alt="NP"  />         
+        <img   src = {images.source_url}  alt="NP"   />         
         <h1 className = 'text-uppercase'> {this.props.location.aboutProps}</h1>   
         
           </div>
