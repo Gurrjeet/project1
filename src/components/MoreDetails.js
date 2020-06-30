@@ -40,11 +40,7 @@ class MoreDetails extends Component
     
   
  
-  /*check = () => {
-    this.setState({media:this.state.media.filter(media => media.title.rendered===this.props.location.aboutProps)
-    })
-  }
- */
+  
   
    render()
    {  
@@ -61,7 +57,7 @@ return (
      images.map(images => {
        return (
       <div key = {images.id}>
-        <img   src = {images.source_url}  alt="NP"   />         
+        <img   src = {images.source_url}  alt="NP"  />         
         <h1 className = 'text-uppercase'> {this.props.location.aboutProps}</h1>   
         
           </div>

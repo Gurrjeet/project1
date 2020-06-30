@@ -85,7 +85,7 @@ class ViewSite extends Component
           {/* Link to view more photos  */}
           <h4> <NavLink to = {{ pathname: '/moredetails', aboutProps: postData.title.rendered }} className = 'btn btn-dark btn-lg' style ={{textDecoration:'underline'}}>More Pics</NavLink> </h4> 
              {/* Link to contact the service provider  */}
-            <h4> <NavLink to = {{ pathname: '/contact', aboutProps: postData.title.rendered }} className = 'btn btn-danger btn-lg' >Contact {postData.title.rendered}</NavLink> </h4> 
+            <h4> <NavLink to = {{ pathname: '/contact', aboutProps: postData.title.rendered }} className = 'btn btn-danger btn-lg' >Contact   {postData.title.rendered}</NavLink> </h4> 
             
            </div>
            </div>
